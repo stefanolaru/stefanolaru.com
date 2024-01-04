@@ -1,0 +1,71 @@
+---
+const activities = [
+  "Listen",
+  "Analyze",
+  "Estimate",
+  "Design",
+  "Integrate",
+  "Collaborate",
+  "Mentor",
+  "Teach",
+  "Code",
+  "Build",
+  "Test",
+  "Debug",
+  "Deploy",
+  "Automate",
+  "Monitor",
+  "Support",
+  "Document",
+  "Learn",
+  "Refactor",
+  "Optimize",
+  "Manage",
+  "Orchestrate",
+  "Secure",
+  "Improve",
+  "Scale",
+  "Communicate",
+];
+---
+
+<div
+  class="flex border-stone-300 md:col-span-2 md:row-span-2 xl:border-l dark:border-black"
+>
+  <div
+    class="-m-1px min-h-20sq flex-1 rounded-1 border border-stone-300 bg-stone-200 px-8 py-10 dark:border-black dark:bg-neutral-900 dark:text-white"
+  >
+    <h2 class="mb-8 font-heading text-3xl font-bold">Tech Stack</h2>
+    <p class="mb-8 text-lg leading-relaxed">
+      I definitely have my preferences, but I’m not bound to any specific tech,
+      always choosing the right tool for the job.
+    </p>
+
+    <div class="mt-4 font-heading text-lg">Languages</div>
+    <p class="font-mono">TypeScript, Node.js, PHP, Bash</p>
+
+    <div class="mt-4 font-heading text-lg">Databases</div>
+    <p class="font-mono">
+      DynamoDB, various flavors of SQL, Caching & Search Engines
+    </p>
+
+    <div class="mt-4 font-heading text-lg">DevOps</div>
+    <p class="font-mono">
+      AWS CloudFormation & CDK, AWS Code services, GitHub Actions
+    </p>
+
+    <p class="mb-4 mt-8 text-lg">
+      The tech changes and tools shift, but this is what I do daily:
+    </p>
+
+    <ul class="font-heading text-lg">
+      {
+        activities.map((item) => (
+          <li class="inline after:content-['•']  last-of-type:after:hidden">
+            {item}
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+</div>

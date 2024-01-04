@@ -1,0 +1,69 @@
+---
+const items = [
+  "Architecture",
+  "Engineering",
+  "Security",
+  "Infrastructure",
+  "Operations",
+];
+---
+
+<div
+  class="row-span-3 flex flex-col border-stone-300 md:order-2 md:border-l md:border-t-transparent xl:order-3 dark:border-black dark:text-white"
+>
+  <div
+    class="-m-1px flex border border-stone-300 bg-stone-200 lg:rounded-1 dark:border-black dark:bg-neutral-900"
+  >
+    <div class="-mt-1px mb-1px flex min-h-10sq items-center p-4">
+      <img
+        src="./images/aws-badges.png"
+        alt="8x AWS Certified"
+        class="w-full"
+      />
+    </div>
+  </div>
+  <div class="flex flex-1 border-t border-stone-300 dark:border-black">
+    <div
+      class="-m-1px border border-stone-300 px-8 py-10 lg:rounded-1 dark:border-black"
+    >
+      <h2 class="mb-8 font-heading text-3xl font-bold">AWS Certified</h2>
+      <div class="text-lg leading-relaxed">
+        <p class="mb-4">
+          I specialize in
+          <em>serverless</em> solutions and event-driven architectures.
+        </p>
+
+        <p class="mb-8">
+          I design &amp; build cloud-native solutions focusing on security,
+          performance and cost-effectiveness.
+        </p>
+
+        <p class="mb-4 font-heading">My expertise spans</p>
+        <ul class="font-mono uppercase">
+          {
+            items.map((item) => (
+              <li class="flex items-center justify-between">
+                {item}{" "}
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-6 w-6"
+                  viewBox="0 0 24 24"
+                  stroke-width="2"
+                  stroke="currentColor"
+                  fill="none"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <>
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                    <path d="M5 12l5 5l10 -10" />
+                  </>
+                </svg>
+              </li>
+            ))
+          }
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

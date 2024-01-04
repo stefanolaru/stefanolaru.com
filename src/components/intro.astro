@@ -1,0 +1,43 @@
+---
+import Domains from "../components/intro/domains.astro";
+import FindMe from "../components/intro/find-me.astro";
+---
+
+<div
+  class="order-0 col-span-1 row-span-3 grid grid-cols-1 border-t border-t-transparent lg:col-span-2 lg:row-span-1 lg:grid-cols-2 dark:text-white"
+>
+  <div class="col-span-2 flex min-h-10sq flex-col">
+    <div class="-mt-1px flex items-center px-8 pb-10 pt-8">
+      <figure class="mr-4">
+        <img
+          src="./images/stefan-olaru.jpg"
+          alt="Ștefan Olaru"
+          class="h-16 w-16 rounded-full"
+        />
+      </figure>
+      <div class="flex-1">
+        <h1 class="font-heading text-2xl font-bold lg:text-4xl">
+          Ștefan Olaru
+        </h1>
+        <h2 class="text-sm lg:text-base">Cloud Architect & Developer</h2>
+      </div>
+    </div>
+    <div
+      class="col-span-2 -mt-1px flex-1 border-b border-stone-300 px-8 pb-12 dark:border-black"
+    >
+      <h3 class="mb-4 font-heading text-2xl">
+        Architect by training, software engineer by choice.
+      </h3>
+
+      <p class="text-lg leading-relaxed">
+        I've been crafting solutions for nearly two decades, working with
+        clients worldwide, from startups to enterprises, leaving my mark across
+        various domains.
+      </p>
+    </div>
+  </div>
+  <div class="grid lg:col-span-2 lg:grid-cols-2">
+    <Domains />
+    <FindMe />
+  </div>
+</div>

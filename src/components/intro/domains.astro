@@ -1,0 +1,44 @@
+---
+const items = [
+  "Proptech",
+  "Fintech",
+  "Healthtech",
+  "E-commerce",
+  "Automotive",
+  "Consulting",
+  "Agency",
+];
+---
+
+<div class="hidden text-xl lg:flex">
+  <div
+    class="-m-1px flex flex-1 rounded-1 border border-stone-300 bg-stone-200 px-8 py-10 dark:border-black dark:bg-neutral-900"
+  >
+    <ul
+      class="flex flex-1 select-none flex-col justify-between font-mono uppercase"
+    >
+      {
+        items.map((item) => (
+          <li class="flex items-center justify-between">
+            {item}{" "}
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-6 w-6"
+              viewBox="0 0 24 24"
+              stroke-width="2"
+              stroke="currentColor"
+              fill="none"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <>
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path d="M5 12l5 5l10 -10" />
+              </>
+            </svg>
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+</div>

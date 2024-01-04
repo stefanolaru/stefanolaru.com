@@ -1,0 +1,56 @@
+---
+// fetch latest article from hashnode
+const post = await fetch("https://gql.hashnode.com", {
+  method: "POST",
+  headers: {
+    "Content-Type": "application/json",
+  },
+  body: JSON.stringify({
+    query: `
+            {
+                user(username: "stefanolaru") {
+                    posts(page: 1,pageSize:1) {
+                        nodes {
+                            url,
+                            title
+                        }
+                    }
+                }
+            }
+        `,
+  }),
+})
+  .then((res) => res.json())
+  .then((res) => res.data.user.posts.nodes[0] || {});
+---
+
+<div class="flex min-h-10sq">
+  <div
+    class="-m-1px flex rounded-1 border border-stone-300 dark:border-black dark:text-white"
+  >
+    <div class="flex flex-col p-8">
+      <div class="flex-1">
+        <h4 class="uppercas mb-1 font-mono leading-loose">Latest Article</h4>
+        <h3 class="font-heading text-2xl font-bold">
+          {post.title || "No articles yet"}
+        </h3>
+      </div>
+
+      <a
+        href={post.url || "#"}
+        class="relative inline-block select-none"
+        target="_blank"
+      >
+        <span
+          class="flex min-h-16 items-center justify-center rounded-1 border border-black bg-black text-white"
+          ><span class="font-mono text-sm uppercase">Read Article</span></span
+        >
+        <span
+          aria-hidden="true"
+          class="ease-in-out-energetic duration-short absolute inset-0 flex min-h-16 translate-y-0 transform-gpu items-center justify-center rounded-1 border border-black bg-white text-black transition-transform hover:-translate-y-[5.25px] active:translate-y-0"
+          ><span class="font-mono text-sm uppercase">Read Article</span></span
+        >
+      </a>
+    </div>
+  </div>
+</div>

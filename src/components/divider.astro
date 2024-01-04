@@ -1,0 +1,30 @@
+---
+interface Props {
+  top?: string;
+  bottom?: string;
+}
+let { top = "true", bottom = "true" } = Astro.props;
+const css = [
+  "w-full flex dark:border-black border-stone-300 relative z-0",
+  bottom != "false" ? "border-b" : "",
+  top != "false" ? "border-t" : "",
+].join(" ");
+---
+
+<div class={css}>
+  <div
+    class="min-w-4 flex-1 bg-white md:min-w-8 xl:min-w-0 dark:bg-neutral-800"
+  >
+  </div>
+  <div class="relative w-full max-w-7xl">
+    <div
+      class="h-8 w-full border-l border-r border-stone-300 lg:h-16 dark:border-black"
+    >
+      &nbsp;
+    </div>
+  </div>
+  <div
+    class="min-w-4 flex-1 bg-white md:min-w-8 xl:min-w-0 dark:bg-neutral-800"
+  >
+  </div>
+</div>

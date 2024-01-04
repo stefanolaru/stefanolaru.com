@@ -1,0 +1,105 @@
+---
+import "../styles/global.css";
+
+//
+import Divider from "../components/divider.astro";
+import Intro from "../components/intro.astro";
+import Communication from "../components/communication.astro";
+import AWS from "../components/aws.astro";
+import LiferlongLearner from "../components/lifelong-learner.astro";
+//
+import ProductMinded from "../components/product-minded.astro";
+import TeamLeader from "../components/team-leader.astro";
+import OpenBook from "../components/open-book.astro";
+import Human from "../components/human.astro";
+//
+import CorePrinciples from "../components/core-principles.astro";
+import TechStack from "../components/tech-stack.astro";
+import Article from "../components/article.astro";
+import BookCall from "../components/book-call.astro";
+//
+import Footer from "../components/footer.astro";
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="Stefan Olaru" />
+    <meta
+      name="description"
+      content="Helping startups launch and scale, overcoming tech challenges. AWS Certified, developer, architect, mentor, tech advisor, and fractional CTO."
+    />
+    <title>Stefan Olaru - Cloud Architect, Developer, Mentor</title>
+  </head>
+  <body class="bg-white dark:bg-neutral-800">
+    <Divider top="false" />
+    <!-- first grid -->
+    <div class="flex w-full">
+      <div
+        class="lg:dark:gradient-grid-dark lg:gradient-grid min-w-4 flex-1 bg-right-top md:min-w-8 xl:-ml-1px xl:min-w-0"
+      >
+      </div>
+      <div
+        class="relative z-10 grid w-full max-w-7xl border-l border-r border-stone-300 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 dark:border-black"
+      >
+        <Intro />
+        <Communication />
+        <AWS />
+        <LiferlongLearner />
+        <!-- placeholder empty grid -->
+        <div
+          class="dark:gradient-grid-dark gradient-grid order-last hidden min-h-10sq border-l border-stone-300 bg-right-top xl:block dark:border-black"
+        >
+        </div>
+        <!-- // placeholder empty grid -->
+      </div>
+      <div
+        class="lg:dark:gradient-grid-dark lg:gradient-grid min-w-4 flex-1 bg-left-top md:min-w-8 xl:-ml-1px xl:min-w-0"
+      >
+      </div>
+    </div>
+    <Divider />
+    <!-- second grid -->
+    <div class="flex w-full bg-stone-100 dark:bg-neutral-900">
+      <div class="min-w-4 flex-1 md:min-w-8 xl:min-w-0"></div>
+      <div
+        class="relative z-10 grid w-full max-w-7xl grid-cols-1 border-l border-r border-stone-300 leading-relaxed md:grid-cols-2 xl:grid-cols-4 dark:border-black"
+      >
+        <ProductMinded />
+        <TeamLeader />
+        <OpenBook />
+        <Human />
+      </div>
+      <div class="min-w-4 flex-1 md:min-w-8 xl:min-w-0"></div>
+    </div>
+    <Divider />
+    <!-- third grid -->
+    <div class="flex w-full">
+      <div
+        class="lg:dark:gradient-grid-dark lg:gradient-grid min-w-4 flex-1 md:min-w-8 md:bg-right-top xl:-ml-1px xl:min-w-0"
+      >
+      </div>
+      <div
+        class="lg:dark:gradient-grid-dark lg:gradient-grid relative z-0 mx-auto grid w-full max-w-7xl grid-cols-1 border-l border-r border-stone-300 bg-right-top md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 dark:border-black"
+      >
+        <CorePrinciples />
+        <TechStack />
+        <div
+          class="grid border-stone-300 md:col-span-2 md:grid-cols-2 lg:col-span-1 lg:grid-cols-1 lg:border-l dark:border-black"
+        >
+          <Article />
+          <BookCall />
+        </div>
+      </div>
+      <div
+        class="lg:dark:gradient-grid-dark lg:gradient-grid min-w-4 flex-1 bg-left-top md:min-w-8 xl:-ml-1px xl:min-w-0"
+      >
+      </div>
+    </div>
+    <Divider bottom="false" />
+    <Footer />
+  </body>
+</html>

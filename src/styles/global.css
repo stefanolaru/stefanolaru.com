@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@font-face {
+  font-family: "Aeonik";
+  font-weight: 700;
+  font-display: swap;
+  src: url(./fonts/Aeonik-Bold.otf) format("opentype");
+}
+@font-face {
+  font-family: "JetBrainsMono";
+  font-weight: 300;
+  font-display: swap;
+  src: url(./fonts/JetBrainsMono-Light.woff2) format("woff2");
+}
+@layer components {
+  .gradient-grid {
+    background-image: linear-gradient(
+        0deg,
+        rgba(231, 229, 228, 0.5) 1px,
+        transparent 1px
+      ),
+      linear-gradient(90deg, rgba(231, 229, 228, 0.5) 1px, transparent 1px);
+    background-size: 32px 32px;
+  }
+  .gradient-grid-dark {
+    background-image: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.5) 1px,
+        transparent 1px
+      ),
+      linear-gradient(90deg, rgba(0, 0, 0, 0.5) 1px, transparent 1px);
+    background-size: 32px 32px;
+  }
+
+  .tick-bg {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' stroke-width='2' stroke='currentColor' fill='none' stroke-linecap='round' stroke-linejoin='round' %3E%3Cpath stroke='none' d='M0 0h24v24H0z' fill='none' /%3E%3Cpath d='M5 12l5 5l10 -10' /%3E%3C/svg%3E");
+    background-size: 24px 24px;
+    background-position: center right;
+    background-repeat: no-repeat;
+  }
+}
