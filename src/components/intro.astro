@@ -18,11 +18,16 @@ import FindMe from "../components/intro/find-me.astro";
           quality="max"
           densities={[1.5, 2]}
           class="rounded-full"
+          itemprop="image"
         />
       </figure>
       <div class="flex-1">
-        <p class="font-heading text-2xl font-bold lg:text-4xl">Ștefan Olaru</p>
-        <h1 class="text-sm lg:text-base">Cloud Architect & Developer</h1>
+        <p class="font-heading text-2xl font-bold lg:text-4xl" itemprop="name">
+          Ștefan Olaru
+        </p>
+        <h1 class="text-sm lg:text-base" itemprop="jobTitle">
+          Cloud Architect & Developer
+        </h1>
       </div>
     </div>
     <div
