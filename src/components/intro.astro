@@ -1,4 +1,6 @@
 ---
+import { Image } from "astro:assets";
+import avatar from "../../public/images/stefan-olaru.jpg";
 import Domains from "../components/intro/domains.astro";
 import FindMe from "../components/intro/find-me.astro";
 ---
@@ -9,19 +11,18 @@ import FindMe from "../components/intro/find-me.astro";
   <div class="col-span-2 flex min-h-10sq flex-col">
     <div class="-mt-1px flex items-center px-8 pb-10 pt-8">
       <figure class="mr-4">
-        <img
-          src="./images/stefan-olaru.jpg"
+        <Image
+          src={avatar}
           alt="Ștefan Olaru"
           width="64"
-          height="64"
+          quality="max"
+          densities={[1.5, 2]}
           class="rounded-full"
         />
       </figure>
       <div class="flex-1">
-        <h1 class="font-heading text-2xl font-bold lg:text-4xl">
-          Ștefan Olaru
-        </h1>
-        <h2 class="text-sm lg:text-base">Cloud Architect & Developer</h2>
+        <p class="font-heading text-2xl font-bold lg:text-4xl">Ștefan Olaru</p>
+        <h1 class="text-sm lg:text-base">Cloud Architect & Developer</h1>
       </div>
     </div>
     <div

@@ -6,6 +6,9 @@ const items = [
   "Infrastructure",
   "Operations",
 ];
+
+import { Image } from "astro:assets";
+import badgesImg from "../../public/images/aws-badges.png";
 ---
 
 <div
@@ -19,8 +22,9 @@ const items = [
       target="_blank"
       class="-mt-1px mb-1px flex min-h-10sq items-center p-4"
     >
-      <img
-        src="./images/aws-badges.png"
+      <Image
+        src={badgesImg}
+        widths={[240, 400, badgesImg.width]}
         alt="Solutions Architect Professional, Developer & SysOps Associate, Security, Database & Data Analytics Specialty"
         title="8x AWS Certified"
         class="w-full"
