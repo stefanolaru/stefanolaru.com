@@ -29,7 +29,6 @@ module.exports = {
           "sans-serif",
         ],
         heading: [
-          "Aeonik",
           "Inter",
           "Roboto",
           "Helvetica Neue",
